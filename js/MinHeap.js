@@ -8,7 +8,7 @@ class MinHeap {
       this.heap[i2] = temp;
   }
   getParentIndex(i) {
-      return (i - 1) >> 1;  // 二进制向左边移动一位，达到除以2的效果
+      return Math.floor((i-1) / 2);  
   }
   getLeftIndex(i) {
       return i * 2 + 1;
@@ -56,5 +56,3 @@ class MinHeap {
       return this.heap.length;
   }
 }
-
-
